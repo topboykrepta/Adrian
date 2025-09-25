@@ -43,10 +43,10 @@ document.addEventListener("DOMContentLoaded", function() {
   contactForm.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const serviceID = "service_ahk757a";
-    const templateID = "template_pmjy6cl_ID";
+    const serviceID = "service_ahk757a";   // your actual service ID
+    const templateID = "template_pmjy6cl"; // your actual template ID
 
-    emailjs.sendForm(service_ahk757a, template_pmjy6cl, this)
+    emailjs.sendForm(serviceID, templateID, this)
       .then(() => {
         alert("Message sent successfully!");
       }, (err) => {
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-//AOS animations settings
+// AOS animations settings
 AOS.init({
   once: true,
 });

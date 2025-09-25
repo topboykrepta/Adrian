@@ -43,12 +43,13 @@ document.addEventListener("DOMContentLoaded", function() {
   contactForm.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const serviceID = "service_ahk757a";   // your actual service ID
-    const templateID = "template_pmjy6cl"; // your actual template ID
+    const serviceID = "service_ahk757a";   // your EmailJS service ID
+    const templateID = "template_pmjy6cl"; // your EmailJS template ID
 
     emailjs.sendForm(serviceID, templateID, this)
       .then(() => {
         alert("Message sent successfully!");
+        contactForm.reset();
       }, (err) => {
         alert("Failed to send message. Please try again later.");
         console.error("Error:", err);

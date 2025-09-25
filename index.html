@@ -69,8 +69,8 @@
           <div class="hero-content">
             <span class="hero-greeting"> Hello, I am</span>
             <h1 class="hero-heading">Adrian Charles</h1>
-            <span class="hero-heading-subtitle"
-              >Am a cybersecurity and Digital Forensics Expert, a freelance Web Developer, AI Trainer, a writer and a Social Media Manager
+            <span class="hero-heading-subtitle">
+              Am a cybersecurity and Digital Forensics Expert, a freelance Web Developer, AI Trainer, a writer and a Social Media Manager
             </span>
             <div class="about-social-list">
               <div class="social-links-row">
@@ -224,7 +224,7 @@
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
       (function () {
-        emailjs.init("3y9jUdd_WCbR80_-1"); // your Public Key
+        emailjs.init("3y9jUdd_WCbR80_-1"); // ✅ your Public Key
       })();
 
       document.addEventListener("DOMContentLoaded", function () {
@@ -233,8 +233,8 @@
         contactForm.addEventListener("submit", function (event) {
           event.preventDefault();
 
-          const serviceID = "service_ahk757a";   // your EmailJS Service ID
-          const templateID = "template_pmjy6cl"; // your EmailJS Template ID
+          const serviceID = "service_ahk757a";   // ✅ your Service ID
+          const templateID = "template_j2op9hj"; // ✅ your Template ID
 
           emailjs.sendForm(serviceID, templateID, this).then(
             () => {

@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
     event.preventDefault();
 
     const serviceID = "service_ahk757a";   // your EmailJS service ID
-    const templateID = "template_pmjy6cl"; // your EmailJS template ID
+    const templateID = "template_j2op9hj"; // your EmailJS template ID
 
     emailjs.sendForm(serviceID, templateID, this)
       .then(() => {

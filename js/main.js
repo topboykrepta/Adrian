@@ -40,18 +40,28 @@ window.addEventListener("scroll", function () {
 document.addEventListener("DOMContentLoaded", function() {
   const contactForm = document.getElementById("contact-form");
 
+  if (!contactForm) {
+    return;
+  }
+
   contactForm.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const serviceID = "service_ahk757a";   // your EmailJS service ID
-   const templateID = "template_j2op9hj"; // your EmailJS template ID
+    if (typeof emailjs === "undefined") {
+      alert("Message service is not ready yet. Please reload the page and try again.");
+      return;
+    }
+
+    const serviceID = "service_ahk757a";
+    const templateID = "template_cg8uefw";
 
     emailjs.sendForm(serviceID, templateID, this)
       .then(() => {
         alert("Message sent successfully!");
         contactForm.reset();
       }, (err) => {
-        alert("Failed to send message. Please try again later.");
+        const message = err && err.text ? err.text : "Failed to send message. Please try again later.";
+        alert(message);
         console.error("Error:", err);
       });
   });
